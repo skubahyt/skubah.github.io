@@ -362,3 +362,122 @@ body {
     transform: scale(1.05); /* Efecto de zoom sutil al pasar el ratón */
     box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
+
+/* --- ESTILOS PARA LA PÁGINA DE PATROCINADORES --- */
+
+.sponsor-links-container {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre los botones */
+}
+
+.sponsor-link {
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #0066b2; /* Azul BMW */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sponsor-link i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 1.2rem;
+}
+
+.sponsor-link:hover {
+    background-color: #e53935; /* Rojo BMW al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "levantar" el botón */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+/* --- ESTILOS PARA LA PÁGINA DE CONTACTO --- */
+
+/* Contenedor de Redes Sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.social-link {
+    padding: 0.8rem 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.social-link.youtube    { background-color: #CD201F; }
+.social-link.instagram  { background: #d6249f; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+.social-link.tiktok     { background-color: #000000; }
+
+/* Formulario de contacto */
+.contact-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0066b2; /* Azul BMW al seleccionar */
+    box-shadow: 0 0 5px rgba(0, 102, 178, 0.5);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #0066b2; /* Azul BMW */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #004a80; /* Azul más oscuro */
+}

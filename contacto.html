@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quién soy? - SKUBAH Motovlog</title>
+    <title>Contacto - SKUBAH Motovlog</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -21,10 +21,9 @@
                 <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </nav>
-
         <div class="sidebar-logo-container">
             <a href="https://www.youtube.com/@skubah" target="_blank" rel="noopener noreferrer" title="Visita mi canal de YouTube">
-                <img src="logo-skubah.png" alt="Logo Skubah YouTube">            
+                <img src="logo-skubah.png" alt="Logo Skubah YouTube">
             </a>
         </div>
     </div>
@@ -34,17 +33,39 @@
             <button class="menu-toggle" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </button>
-            <span class="page-title">¿Quién soy?</span>
+            <span class="page-title">Contacto</span>
         </header>
 
         <main>
             <div class="contenido-pagina">
-                <h2>Skubah, ¿quién soy?</h2>
-                <p>La pasión por las dos ruedas no siempre nace en un circuito. A veces, como en mi caso, se enciende con el eco de las carreras de MotoGP que veías con tu padre o con las imágenes legendarias de las Africa Twin abriéndose paso en el desierto del Dakar. Esa semilla, plantada en la infancia, no germinó al instante, sino que esperó su momento. Y ese momento llegó con una moto inesperada, una Piaggio MP3, que se convirtió en la chispa que despertó el gusanillo.</p>
-                <p>Pronto descubrí que la moto era un todo: libertad, viajes, emoción y, sobre todo, una fraternidad que te une a gente increíble en el camino.</p>
-                <p>Esa misma fraternidad fue la que me impulsó a crear el canal. Nació de la amistad, gracias al apoyo de un gran amigo y youtuber, Aloysius, quien me animó a pulsar el botón de grabar y compartir mi mundo. Así nació este proyecto, bajo un nombre que es mucho más que una marca: <strong>SKUBAH</strong>. Es mi apodo de la infancia, una palabra que llevo tatuada en la piel y que representa la autenticidad que busco en cada vídeo.</p>
-                <p>Y ¿cuál es la misión? Es simple. Siempre que edito un vídeo, busco conectar contigo desde la <strong>humildad de una persona normal</strong>. Mis vídeos no son para mostrar hazañas inalcanzables, sino para demostrarte que ese sueño que tienes de viajar en moto, de sentir esa libertad, está a tu alcance. Quiero que veas que, si te lo propones, <strong>tú también puedes hacerlo</strong>.</p>
-                <p>Este no es solo mi canal, es nuestro punto de encuentro. Así que, si sientes la llamada de la carretera, bienvenido a la familia.</p>
+                <h2>Ponte en Contacto</h2>
+                <p>Si tienes alguna pregunta, propuesta de colaboración o simplemente quieres saludar, ¡no dudes en usar mis redes sociales o rellenar el formulario!</p>
+
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@skubah" class="social-link youtube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="https://www.instagram.com/skubah.yt" class="social-link instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@skubah.yt" class="social-link tiktok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/mvgbwjjd" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Tu Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
             </div>
         </main>
     </div>
