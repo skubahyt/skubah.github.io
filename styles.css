@@ -1,0 +1,364 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5; /* Un blanco suave para el fondo */
+    color: #333;
+    overflow-x: hidden; /* Previene el scroll horizontal no deseado */
+}
+
+/* Sidebar (Menú Lateral) */
+.sidebar {
+    width: 250px;
+    background-color: #001f44; /* Azul oscuro BMW */
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: transform 0.3s ease-in-out; /* Animación para el menú responsive */
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.skubah-text {
+    font-family: 'Arial Black', sans-serif; /* Fuente más robusta */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skubah-text::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 70%;
+    height: 3px;
+    background-color: #e53935; /* Rojo BMW */
+    border-radius: 2px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #e0e0e0; /* Gris claro para los enlaces */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #003366; /* Azul medio BMW al pasar el ratón */
+    color: #ffffff;
+}
+
+/* Botón de cerrar para móvil (dentro del sidebar) */
+.sidebar .close-btn {
+    display: none; /* Oculto por defecto en desktop */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+.content-wrapper {
+    margin-left: 250px; /* Margen para dejar espacio al sidebar */
+    transition: margin-left 0.3s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior (para el menú hamburguesa en móvil) */
+.top-bar {
+    background-color: #0066b2; /* Azul BMW */
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Oculto por defecto en desktop */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.page-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Portada Principal */
+.portada {
+    flex-grow: 1; /* Para que ocupe el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Blanco */
+    /* **IMPORTANTE**: Cambia 'tu-imagen.jpg' por el nombre de tu foto */
+    background: url('https://via.placeholder.com/1920x1080.png?text=Añade+aquí+tu+imagen+potente') no-repeat center center/cover;
+    position: relative;
+}
+
+.portada::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra para que el texto resalte */
+    z-index: 0;
+}
+
+.portada-contenido {
+    position: relative;
+    z-index: 1;
+    padding: 2rem; /* Añadir padding para pantallas pequeñas */
+}
+
+.portada h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeInDown 1s ease-out; /* Animación de entrada */
+}
+
+.portada p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    animation: fadeInUp 1s ease-out 0.5s forwards; /* Animación de entrada con retardo */
+    opacity: 0; /* Oculto inicialmente para la animación */
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contenido de las otras páginas */
+.contenido-pagina {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 2rem auto; /* Ajustar margen para que no choque con el top-bar */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.contenido-pagina h2 {
+    color: #0066b2; /* Azul BMW */
+    border-bottom: 2px solid #e53935; /* Rojo BMW */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0; /* Oculta el sidebar por defecto en móviles */
+        transform: translateX(-100%); /* Mueve el sidebar fuera de la vista */
+    }
+
+    .sidebar.active {
+        width: 250px;
+        transform: translateX(0); /* Muestra el sidebar */
+    }
+
+    .sidebar .close-btn {
+        display: block; /* Muestra el botón de cerrar en móvil */
+    }
+
+    .content-wrapper {
+        margin-left: 0; /* No hay margen a la izquierda en móvil */
+    }
+
+    .content-wrapper.shifted {
+        margin-left: 250px; /* Mueve el contenido cuando el sidebar está activo */
+        overflow: hidden; /* Evita scroll en el contenido cuando el menú está abierto */
+    }
+
+    .top-bar {
+        display: flex; /* Muestra la barra superior en móvil */
+    }
+
+    .portada h1 {
+        font-size: 2.5rem;
+    }
+
+    .portada p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* El menú puede ocupar todo el ancho en pantallas muy pequeñas */
+    }
+    .sidebar.active {
+        width: 100%;
+    }
+    .content-wrapper.shifted {
+        margin-left: 100%; /* Mueve el contenido completamente */
+    }
+
+    .skubah-text {
+        font-size: 2rem;
+    }
+    .portada h1 {
+        font-size: 2rem;
+    }
+    .portada p {
+        font-size: 1rem;
+    }
+    .contenido-pagina {
+        padding: 1.5rem 1rem;
+        margin: 1rem auto;
+    }
+}
+
+/* --- ESTILOS PARA LA PÁGINA DE VÍDEOS DE YOUTUBE --- */
+
+.video-grid {
+    display: grid;
+    /* Crea 2 columnas en desktop y 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem; /* Espacio entre los vídeos */
+    margin-top: 2rem;
+}
+
+.video-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+    overflow: hidden; /* Asegura que el iframe no se salga del borde redondeado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Contenedor del iframe para mantener la proporción 16:9 */
+.video-container iframe {
+    width: 100%;
+    height: 250px; /* Altura fija para la miniatura */
+    border: none; /* Quita el borde del iframe */
+}
+
+.video-container h3 {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 480px) {
+    .video-grid {
+        /* Fuerza una sola columna en pantallas muy pequeñas */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .video-container iframe {
+        height: 200px; /* Reduce la altura en móviles */
+    }
+
+    .video-container h3 {
+        font-size: 1rem;
+    }
+}
+
+/* --- ESTILOS PARA EL LOGO INFERIOR EN EL SIDEBAR --- */
+
+.sidebar {
+    /* Asegúrate de que el sidebar sigue siendo un contenedor flex */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo-container {
+    margin-top: auto; /* <-- ESTA ES LA MAGIA: empuja el contenedor al final */
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.sidebar-logo-container img {
+    max-width: 120px; /* Tamaño máximo del logo */
+    height: auto;
+    border-radius: 50%; /* Estilo circular, ¡puedes quitarlo si tu logo es cuadrado! */
+    background-color: #ffffff; /* Fondo blanco por si el logo tiene transparencias */
+    padding: 5px; /* Pequeño borde blanco alrededor del logo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-logo-container a:hover img {
+    transform: scale(1.05); /* Efecto de zoom sutil al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
