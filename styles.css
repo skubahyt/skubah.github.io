@@ -481,3 +481,28 @@ body {
 .submit-btn:hover {
     background-color: #004a80; /* Azul más oscuro */
 }
+
+/* --- ESTILOS PARA EL BOTÓN DE ACCIÓN (CTA) EN LA PORTADA --- */
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background-color: #e53935; /* Rojo BMW */
+    color: #ffffff;
+    border: none;
+    border-radius: 50px; /* Bordes redondeados */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c42c28; /* Rojo más oscuro */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}

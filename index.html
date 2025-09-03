@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKUBAH Motovlog</title>
+    
+    <title>SKUBAH Motovlog | Aventuras y Viajes en Moto</title>
+    <meta name="description" content="Bienvenido a SKUBAH Motovlog. Descubre mis aventuras, rutas y pruebas en moto por España y Europa. ¡Únete a la comunidad y vive la pasión por las dos ruedas!">
+    <meta name="keywords" content="motovlog, viajes en moto, skubah, bmw gs, rutas en moto, aventura, motociclismo, españa">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -24,44 +33,45 @@
 
     <div class="sidebar-logo-container">
         <a href="https://www.youtube.com/@skubah" target="_blank" rel="noopener noreferrer" title="Visita mi canal de YouTube">
-            <img src="logo-skubah.png" alt="Logo Skubah YouTube">
+            <img src="logo-skubah.png" alt="Logo del canal de YouTube de Skubah Motovlog">
         </a>
     </div>
-    </div>
+</div>
 
-    <div class="content-wrapper">
-        <header class="top-bar">
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-            <span class="page-title">SKUBAH Motovlog</span>
-        </header>
+<div class="content-wrapper">
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="page-title">SKUBAH Motovlog</span>
+    </header>
 
-        <main class="portada">
-            <div class="portada-contenido">
-                <h1>SKUBAH Motovlog</h1>
-                <p>Tu aventura sobre dos ruedas comienza aquí.</p>
-            </div>
-            </main>
-    </div>
+    <main class="portada" style="background-image: url('moto-fondo.jpg');">
+        <div class="portada-contenido">
+            <h1>SKUBAH Motovlog</h1>
+            <p>Tu aventura sobre dos ruedas comienza aquí.</p>
+            <a href="youtube.html" class="cta-button">VER MI ÚLTIMA AVENTURA</a>
+        </div>
+    </main>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const closeBtn = document.querySelector('.close-btn');
-            const sidebar = document.querySelector('.sidebar');
-            const contentWrapper = document.querySelector('.content-wrapper');
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const closeBtn = document.querySelector('.close-btn');
+        const sidebar = document.querySelector('.sidebar');
+        const contentWrapper = document.querySelector('.content-wrapper');
 
-            menuToggle.addEventListener('click', () => {
-                sidebar.classList.add('active');
-                contentWrapper.classList.add('shifted');
-            });
-
-            closeBtn.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-                contentWrapper.classList.remove('shifted');
-            });
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            contentWrapper.classList.add('shifted');
         });
-    </script>
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            contentWrapper.classList.remove('shifted');
+        });
+    });
+</script>
 </body>
 </html>
