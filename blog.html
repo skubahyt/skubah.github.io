@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Aventuras en Moto - SKUBAH Motovlog</title>
+    <meta name="description" content="Lee las últimas crónicas, guías de rutas y aventuras en moto del blog de SKUBAH. Encuentra inspiración para tu próximo viaje.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+    <a href="index.html" class="logo">
+        <span class="skubah-text">SKUBAH</span>
+    </a>
+    <button class="close-btn" aria-label="Cerrar menú">&times;</button>
+    <nav>
+        <ul>
+            <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="patrocinadores.html"><i class="fas fa-handshake"></i> Patrocinadores</a></li>
+            <li><a href="skubah.html"><i class="fas fa-user-circle"></i> Yo, Skubah</a></li>
+            <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="sidebar-logo-container">
+        <a href="https://www.youtube.com/@skubah" target="_blank" rel="noopener noreferrer" title="Visita mi canal de YouTube">
+            <img src="logo-skubah.png" alt="Logo del canal de YouTube de Skubah Motovlog">
+        </a>
+    </div>
+</div>
+
+    <div class="content-wrapper">
+        <header class="top-bar">
+            </header>
+
+        <main>
+            <div class="contenido-pagina">
+                <h2>Blog de Aventuras</h2>
+                <p>Aquí encontrarás las crónicas de mis viajes, guías de rutas, reviews y mucho más. ¡Espero que te sirva de inspiración!</p>
+                
+                <div id="blog-posts-container" class="blog-grid">
+                    <p>Cargando aventuras...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+    // Configuración de Contentful
+    const SPACE_ID = 'wz2hm6rhqb8x'; // <-- PEGA AQUÍ TU SPACE ID
+    const ACCESS_TOKEN = 'YfFuEr8_FIU70K3Ae5vETw8FD7dg3IONtf8b6L-a7pE'; // <-- PEGA AQUÍ TU ACCESS TOKEN
+
+    const postsContainer = document.getElementById('blog-posts-container');
+
+    // Petición a la API de Contentful
+    fetch(`https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=entradaDeBlog`)
+        .then(response => response.json())
+        .then(data => {
+            postsContainer.innerHTML = ''; // Limpiar el mensaje de "Cargando..."
+            
+            // Mapear los assets (imágenes) para un acceso fácil
+            const assets = new Map(data.includes.Asset.map(asset => [asset.sys.id, asset.fields]));
+
+            data.items.forEach(item => {
+                const post = item.fields;
+                const imageUrl = assets.get(post.imagenDePortada.sys.id)?.file.url;
+
+                const postCard = document.createElement('a');
+                postCard.href = `post.html?slug=${post.slug}`;
+                postCard.className = 'post-card';
+
+                postCard.innerHTML = `
+                    <div class="post-card-image" style="background-image: url('${imageUrl}')"></div>
+                    <div class="post-card-content">
+                        <h3>${post.titulo}</h3>
+                        <p>${post.resumen}</p>
+                        <span>Leer más &rarr;</span>
+                    </div>
+                `;
+                postsContainer.appendChild(postCard);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar las entradas:', error);
+            postsContainer.innerHTML = '<p>No se pudieron cargar las aventuras. Inténtalo de nuevo más tarde.</p>';
+        });
+</script>
+</body>
+</html>

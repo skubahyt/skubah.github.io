@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKUBAH Motovlog</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="logo">
+            <span class="skubah-text">SKUBAH</span>
+        </a>
+        <button class="close-btn" aria-label="Cerrar menú">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="youtube.html"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="patrocinadores.html"><i class="fas fa-handshake"></i> Patrocinadores</a></li>
+                <li><a href="skubah.html"><i class="fas fa-user-circle"></i> Yo, Skubah</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-logo-container">
+            <a href="https://www.youtube.com/@skubah" target="_blank" rel="noopener noreferrer" title="Visita mi canal de YouTube">
+                <img src="logo-skubah.png" alt="Logo del canal de YouTube de Skubah Motovlog">
+            </a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <header class="top-bar">
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span class="page-title">Blog</span>
+        </header>
+
+        <main>
+            <div class="contenido-pagina post-full">
+                <h1 id="post-title">Cargando...</h1>
+                <img id="post-image" src="" alt="" class="post-full-image">
+                <div id="post-content" class="post-full-content">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["richTextHtmlRenderer"] = factory();
+	else
+		root["richTextHtmlRenderer"] = factory();
+})(self, function() {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "documentToHtmlString": () => (/* binding */ documentToHtmlString)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+var MARKS = Object.freeze({
+  BOLD: 'bold',
+  ITALIC: 'italic',
+  UNDERLINE: 'underline',
+  CODE: 'code',
+  SUPERSCRIPT: 'superscript',
+  SUBSCRIPT: 'subscript'
+});
+var INLINES = Object.freeze({
+  HYPERLINK: 'hyperlink',
+  ENTRY_HYPERLINK: 'entry-hyperlink',
+  ASSET_HYPERLINK: 'asset-hyperlink',
+  EMBEDDED_ENTRY: 'embedded-entry-inline'
+});
+var BLOCKS = Object.freeze({
+  DOCUMENT: 'document',
+  PARAGRAPH: 'paragraph',
+  HEADING_1: 'heading-1',
+  HEADING_2: 'heading-2',
+  HEADING_3: 'heading-3',
+  HEADING_4: 'heading-4',
+  HEADING_5: 'heading-5',
+  HEADING_6: 'heading-6',
+  OL_LIST: 'ordered-list',
+  UL_LIST: 'unordered-list',
+  LIST_ITEM: 'list-item',
+  HR: 'horizontal-rule',
+  QUOTE: 'blockquote',
+  EMBEDDED_ENTRY: 'embedded-entry-block',
+  EMBEDDED_ASSET: 'embedded-asset-block',
+  TABLE: 'table',
+  TABLE_ROW: 'table-row',
+  TABLE_CELL: 'table-cell',
+  TABLE_HEADER_CELL: 'table-header-cell'
+});
+var TOP_LEVEL_BLOCKS = Object.freeze([BLOCKS.PARAGRAPH, BLOCKS.HEADING_1, BLOCKS.HEADING_2, BLOCKS.HEADING_3, BLOCKS.HEADING_4, BLOCKS.HEADING_5, BLOCKS.HEADING_6, BLOCKS.OL_LIST, BLOCKS.UL_LIST, BLOCKS.HR, BLOCKS.QUOTE, BLOCKS.EMBEDDED_ENTRY, BLOCKS.EMBEDDED_ASSET, BLOCKS.TABLE]);
+var VOID_BLOCKS = Object.freeze([BLOCKS.HR, BLOCKS.EMBEDDED_ENTRY, BLOCKS.EMBEDDED_ASSET]);
+var HEADINGS = Object.freeze([BLOCKS.HEADING_1, BLOCKS.HEADING_2, BLOCKS.HEADING_3, BLOCKS.HEADING_4, BLOCKS.HEADING_5, BLOCKS.HEADING_6]);
+var CONTAINERS = Object.freeze([BLOCKS.OL_LIST, BLOCKS.UL_LIST, BLOCKS.LIST_ITEM, BLOCKS.QUOTE, BLOCKS.TABLE, BLOCKS.TABLE_ROW, BLOCKS.TABLE_CELL, BLOCKS.TABLE_HEADER_CELL]);
+var TABLE_BLOCKS = Object.freeze([BLOCKS.TABLE, BLOCKS.TABLE_ROW, BLOCKS.TABLE_CELL, BLOCKS.TABLE_HEADER_CELL]);
+var LIST_BLOCKS = Object.freeze([BLOCKS.OL_LIST, BLOCKS.UL_LIST]);
+var TEXT_CONTAINERS = Object.freeze([BLOCKS.PARAGRAPH].concat(HEADINGS));
+var SANITIZE_TAGS = Object.freeze({
+  a: {
+    href: /^(ftp|http|https|mailto):/
+  }
+});
+var PASS_THROUGH = Object.freeze({
+  NONE: Symbol('none'),
+  FLAT: Symbol('flat'),
+  SLUG: Symbol('slug')
+});
+var isObject = function isObject(thing) {
+  return !!thing && _typeof(thing) === 'object';
+};
+var isNode = function isNode(thing) {
+  return isObject(thing) && !!thing.nodeType && !!thing.content;
+};
+var isDocument = function isDocument(thing) {
+  return isNode(thing) && thing.nodeType === BLOCKS.DOCUMENT && Array.isArray(thing.content);
+};
+var isBlock = function isBlock(thing) {
+  return isNode(thing) && Array.isArray(thing.content) && TOP_LEVEL_BLOCKS.includes(thing.nodeType);
+};
+var isContainer = function isContainer(thing) {
+  return isBlock(thing) && CONTAINERS.includes(thing.nodeType) && thing.content.every(isBlock);
+};
+var isTextContainer = function isTextContainer(thing) {
+  return isBlock(thing) && TEXT_CONTAINERS.includes(thing.nodeType) && thing.content.every(function (node) {
+    return isText(node) || isInline(node);
+  });
+};
+var isVoid = function isVoid(thing) {
+  return isBlock(thing) && VOID_BLOCKS.includes(thing.nodeType);
+};
+var isInline = function isInline(thing) {
+  return isNode(thing) && Object.values(INLINES).includes(thing.nodeType) && Array.isArray(thing.content);
+};
+var isText = function isText(thing) {
+  return isObject(thing) && !!thing.nodeType && typeof thing.value === 'string';
+};
+var hasMarks = function hasMarks(thing) {
+  return isText(thing) && !!thing.marks && Array.isArray(thing.marks) && thing.marks.every(isMark);
+};
+var isMark = function isMark(thing) {
+  return isObject(thing) && !!thing.type;
+};
+function escape(string) {
+  var htmlEscapes = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return string.replace(/[&<>"']/g, function (match) {
+    return htmlEscapes[match];
+  });
+}
+var defaultNodeRenderers = {
+  'heading-1': function heading1(node, next) {
+    return "<h1>".concat(next(node.content), "</h1>");
+  },
+  'heading-2': function heading2(node, next) {
+    return "<h2>".concat(next(node.content), "</h2>");
+  },
+  'heading-3': function heading3(node, next) {
+    return "<h3>".concat(next(node.content), "</h3>");
+  },
+  'heading-4': function heading4(node, next) {
+    return "<h4>".concat(next(node.content), "</h4>");
+  },
+  'heading-5': function heading5(node, next) {
+    return "<h5>".concat(next(node.content), "</h5>");
+  },
+  'heading-6': function heading6(node, next) {
+    return "<h6>".concat(next(node.content), "</h6>");
+  },
+  paragraph: function paragraph(node, next) {
+    return "<p>".concat(next(node.content), "</p>");
+  },
+  blockquote: function blockquote(node, next) {
+    return "<blockquote>".concat(next(node.content), "</blockquote>");
+  },
+  'horizontal-rule': function horizontalRule(node, next) {
+    return '<hr/>';
+  },
+  'ordered-list': function orderedList(node, next) {
+    return "<ol>".concat(next(node.content), "</ol>");
+  },
+  'unordered-list': function unorderedList(node, next) {
+    return "<ul>".concat(next(node.content), "</ul>");
+  },
+  'list-item': function listItem(node, next) {
+    var content = next(node.content);
+    if (node.content.length > 0 && isBlock(node.content[0])) {
+      return "<li>".concat(content.substring(1, content.length - 1), "</li>");
+    }
+    return "<li>".concat(content, "</li>");
+  },
+  'embedded-entry-block': function embeddedEntryBlock(node, next) {
+    return "<div>".concat(next(node.content), "</div>");
+  },
+  'embedded-asset-block': function embeddedAssetBlock(node, next) {
+    return "<div>".concat(next(node.content), "</div>");
+  },
+  table: function table(node, next) {
+    return "<table><tbody>".concat(next(node.content), "</tbody></table>");
+  },
+  'table-row': function tableRow(node, next) {
+    return "<tr>".concat(next(node.content), "</tr>");
+  },
+  'table-header-cell': function tableHeaderCell(node, next) {
+    return "<th>".concat(next(node.content), "</th>");
+  },
+  'table-cell': function tableCell(node, next) {
+    return "<td>".concat(next(node.content), "</td>");
+  },
+  hyperlink: function hyperlink(node, next) {
+    var uri = node.data.uri;
+    return "<a href=\"".concat(uri, "\">").concat(next(node.content), "</a>");
+  },
+  'asset-hyperlink': function assetHyperlink(node, next) {
+    return "<a>".concat(next(node.content), "</a>");
+  },
+  'entry-hyperlink': function entryHyperlink(node, next) {
+    return "<a>".concat(next(node.content), "</a>");
+  },
+  'embedded-entry-inline': function embeddedEntryInline(node, next) {
+    return "<span>".concat(next(node.content), "</span>");
+  }
+};
+var defaultMarkRenderers = {
+  bold: function bold(text) {
+    return "<b>".concat(text, "</b>");
+  },
+  italic: function italic(text) {
+    return "<i>".concat(text, "</i>");
+  },
+  underline: function underline(text) {
+    return "<u>".concat(text, "</u>");
+  },
+  code: function code(text) {
+    return "<code>".concat(text, "</code>");
+  },
+  superscript: function superscript(text) {
+    return "<sup>".concat(text, "</sup>");
+  },
+  subscript: function subscript(text) {
+    return "<sub>".concat(text, "</sub>");
+  }
+};
+function documentToHtmlString(richTextDocument, options) {
+  if (!richTextDocument) {
+    return '';
+  }
+  if (!isDocument(richTextDocument)) {
+    throw new Error('Expected a valid Rich Text Document object.');
+  }
+  var _Object$assign = Object.assign({
+    node: defaultNodeRenderers,
+    mark: defaultMarkRenderers,
+    hyperlinks: true,
+    passThrough: PASS_THROUGH.FLAT
+  }, options),
+      nodeRenderers = _Object$assign.node,
+      markRenderers = _Object$assign.mark;
+  function convertNodeList(nodes) {
+    if (!Array.isArray(nodes)) {
+      return '';
+    }
+    var html = '';
+    nodes.forEach(function (node) {
+      if (nodeRenderers[node.nodeType]) {
+        html += nodeRenderers[node.nodeType](node, convertNodeList);
+      } else if (isText(node)) {
+        if (hasMarks(node) && node.marks.length > 0) {
+          html += convertMarks(node.value, node.marks);
+        } else {
+          html += escape(node.value);
+        }
+      } else {
+        console.error("No renderer found for nodeType: \"".concat(node.nodeType, "\""));
+      }
+    });
+    return html;
+  }
+  function convertMarks(value, marks) {
+    var html = escape(value);
+    marks.forEach(function (mark) {
+      if (markRenderers[mark.type]) {
+        html = markRenderers[mark.type](html);
+      }
+    });
+    return html;
+  }
+  return convertNodeList(richTextDocument.content);
+}
+})();
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const SPACE_ID = 'wz2hm6rhqb8x';
+        const ACCESS_TOKEN = 'YfFuEr8_FIU70K3Ae5vETw8FD7dg3IONtf8b6L-a7pE';
+
+        const postTitle = document.getElementById('post-title');
+        const postImage = document.getElementById('post-image');
+        const postContent = document.getElementById('post-content');
+
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+
+        if (slug) {
+            fetch(`https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=entradaDeBlog&fields.slug=${slug}`)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Error de red: ${response.status}`);
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.items.length > 0) {
+                        const post = data.items[0].fields;
+                        const imageUrl = data.includes.Asset.find(asset => asset.sys.id === post.imagenDePortada.sys.id)?.fields.file.url;
+
+                        document.title = `${post.titulo} | SKUBAH Motovlog`;
+                        postTitle.innerText = post.titulo;
+                        postImage.src = imageUrl;
+                        postImage.alt = post.titulo;
+                        
+                        // **INICIO DE LA LÓGICA ROBUSTA**
+                        // Comprobamos si el campo 'contenidoPrincipal' existe y tiene contenido
+                        if (post.contenidoPrincipal) {
+                            try {
+                                // Intentamos renderizarlo como Rich Text
+                                postContent.innerHTML = richTextHtmlRenderer.documentToHtmlString(post.contenidoPrincipal);
+                            } catch (renderError) {
+                                // Si falla (porque no es Rich Text), mostramos un error claro
+                                console.error("Error al renderizar Rich Text:", renderError);
+                                postContent.innerText = "Error: El formato del contenido principal no es compatible. Por favor, asegúrate de que el campo en Contentful sea de tipo 'Rich Text'.";
+                            }
+                        } else {
+                            // Si el campo está vacío, lo indicamos
+                            postContent.innerHTML = "<p><em>Esta entrada aún no tiene contenido.</em></p>";
+                        }
+                        // **FIN DE LA LÓGICA ROBUSTA**
+
+                    } else {
+                        postTitle.innerText = 'Entrada no encontrada';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar la entrada:', error);
+                    postTitle.innerText = 'Error al cargar. Revisa la consola (F12).';
+                });
+        } else {
+            postTitle.innerText = 'No se ha especificado ninguna entrada.';
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -506,3 +506,85 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+/* --- ESTILOS PARA EL BLOG --- */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.post-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #0066b2; /* Azul BMW */
+}
+
+.post-card-content p {
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.post-card-content span {
+    font-weight: bold;
+    color: #e53935; /* Rojo BMW */
+}
+
+/* Estilos para la página de la entrada individual */
+.post-full h1 {
+    font-size: 2.5rem;
+    color: #001f44; /* Azul oscuro BMW */
+}
+
+.post-full-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.post-full-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.post-full-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-full-content h2, .post-full-content h3 {
+    color: #0066b2; /* Azul BMW */
+    margin-top: 2.5rem;
+}
